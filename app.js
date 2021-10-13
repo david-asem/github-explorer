@@ -14,7 +14,7 @@ searchUser.addEventListener('keyup', (e) => {
     github.getUser(inputText).then(data => {
       if (data.profile.message === 'Not Found') {
         //show alert
-        ui.showAlert('Sorry, this user does not exist', 'alert alert-danger d-flex align-items-center')
+        ui.showAlert('Sorry, this user does not exist', 'alert alert-danger')
       } else {
         //show profile
         ui.showProfile(data.profile)
