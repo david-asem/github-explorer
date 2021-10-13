@@ -1,0 +1,14 @@
+version: 2.1
+jobs:
+  test:
+    docker:
+      - image: "circleci/node:16"
+    steps:
+      - checkout
+      - run:
+          command: "echo The CI/CD works fine"
+
+workflows:
+  test-workflow:
+    jobs:
+      - test
